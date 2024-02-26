@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="Style.css">
+      <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+  />
+</head>
+<body>
+    <div id="LeftBarContainer">
+        <div class="searchbarContainer">
+                <input type="search" name="search" id="search" placeholder=" search">
+        </div>
+        <div class="threeElementssiginficant">
+            <div id="todayContainer">
+                <header class="headerforthreeelements">
+                    <p class="imageIcons">📅</p>
+                    <!-- <img class="imageIcons" src="time.png" alt="image"> -->
+                    <strong id="valueToday">0</strong>
+                </header>
+                <h3 id="nameForElelments">Todya</h3>
+            </div>
+            <div id="scheduledContainer">
+                <header class="headerforthreeelements">
+                    <p  class="imageIcons">⏰</p>
+                    <!-- <img class="imageIcons" src="time.png" alt="image"> -->
+                    <strong id="valueToday">0</strong>
+                </header>
+                <h3 id="nameForElelments">Scheduled</h3>
+            </div>
+        </div>
+        <div class="allContainerFull">
+            <div id="allThings">
+                <header class="headerforthreeelements">
+                    <p class="imageIcons">📁</p>
+                    <!-- <img class="imageIcons" src="time.png" alt="image"> -->
+                    <strong id="valueToday">0</strong>
+                </header>
+                <h3 style="margin-left: 13px;" id="nameForElelments">All</h3>
+            </div>
+        </div>
+        <div class="myListContainer">
+            <div class="headingmyList">
+                <p>My Lists</p>
+            </div>
+        </div>
+        <div class="addedListedContainer">
+            <!-- This is adding listed are here -->
+            <div class="addListedContainerInner">
+                <ol id="olOfListContainer">
+                    <!-- <li id="ListInLeftBar"> <abbr>📚</abbr> <p id="ListAddedOfName">New List</p> <p id="ForEachListAddedOneHowMuchAdd">0</p></li> -->
+                    <!-- <li id="ListInLeftBar"> <abbr>📚</abbr> <p id="ListAddedOfName">New List</p> <p id="ForEachListAddedOneHowMuchAdd">0</p></li> -->
+                    <!-- <li id="ListInLeftBar"> <abbr>📚</abbr> <p id="ListAddedOfName">New List</p> <p id="ForEachListAddedOneHowMuchAdd">0</p></li>
+                    <li id="ListInLeftBar"> <abbr>📚</abbr> <p id="ListAddedOfName">New List</p> <p id="ForEachListAddedOneHowMuchAdd">0</p></li>
+                    <li id="ListInLeftBar"> <abbr>📚</abbr> <p id="ListAddedOfName">New List</p> <p id="ForEachListAddedOneHowMuchAdd">0</p></li>
+                    <li id="ListInLeftBar"> <abbr>📚</abbr> <p id="ListAddedOfName">New List</p> <p id="ForEachListAddedOneHowMuchAdd">0</p></li> -->
+                </ol>
+            </div>
+        </div>
+        <div class="addlistsContainer">
+            <div class="inneraddlistsContainer" id="inneraddlistsContainer">
+                <button id="AddListButton">➕</button><p>Add Lists</p>
+            </div>
+        </div>
+    </div>
+    <main id="mainBranch">
+        <header class="HeaderForMianBranch">
+            <div class="focuseTowardheadingcontentandhowmuchaddedlists">
+                <h2 id="Whereareyou">Empty</h2>
+                <h2 id="howmuchlistsaddedsmall">0</h2>
+            </div>
+            <div class="completedcontainer">
+                <p id="completed">0</p><p>Completed</p>
+            </div>
+            <div class="addsmalllistsContainer">
+                <button id="AddListButtonTwo">➕</button>
+            </div>
+        </header>
+        <div class="storebranchContainer">
+            <div class="storeinnerbranch" id="storeinnerbranch">
+                <ol id="MainOl">
+
+                </ol>
+            </div>
+        </div>
+    </main>
+    <div id="containerForSureToDelete">
+        <div class="innerForSure">
+            <div class="contentForThat">
+                <h1>Are sure You Want To Delete Your List</h1>
+            </div>
+            <div class="ButtonContainerForSure">
+                <button id="cancel">Cncel</button>
+                <button id="Delete">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

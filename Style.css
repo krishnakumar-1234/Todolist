@@ -1,0 +1,522 @@
+@import url('//use.fontawesome.com/releases/v4.7.0/css/font-awesome-css.min.css');
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.eot');
+    src: url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+        url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.woff2') format('woff2'),
+        url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.woff') format('woff'),
+        url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.ttf') format('truetype'),
+        url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --colorleftbarcontainer: #000000;
+    --headingcolorall: #0b84ff;
+    --colormainbrach: #2a2929;
+    --normalcolor: #b8b8b8;
+    --nonecolor: rgba(255, 0, 0, 0);
+    --bordersearchbarcolor: #7b7a74;
+    --searchbarbackgroundcolor: #605f5b;
+    --timeelementsofcolor: #fb9f0a;
+    --allthingscolor: #5b626a;
+    --newyellowgreen: #72a24d;
+    --hoverbackground: #ffffff47;
+    --realwhitecolor: white;
+
+}
+
+#LeftBarContainer {
+    top: 0;
+    left: 0;
+    width: 22%;
+    height: 100%;
+    position: fixed;
+    filter: contrast(1.50);
+    background-color: var(--colorleftbarcontainer);
+
+}
+
+.searchbarContainer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#search {
+    width: 93%;
+    height: 24px;
+    font-size: 1em;
+    border-radius: 5px;
+    color: var(--normalcolor);
+    background-color: var(--nonecolor);
+    border: 1px solid var(--bordersearchbarcolor);
+}
+
+.threeElementssiginficant {
+    width: 100%;
+    display: flex;
+    padding-bottom: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#todayContainer {
+    width: 45%;
+    height: 65px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(73, 73, 73);
+    box-shadow: 2px 3px 0 0 rgb(73, 73, 73);
+
+}
+
+#scheduledContainer {
+    width: 45%;
+    height: 65px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(73, 73, 73);
+    box-shadow: 2px 3px 0 0 rgb(73, 73, 73);
+
+}
+
+.allContainerFull {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#allThings {
+    width: 94%;
+    height: 65px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(73, 73, 73);
+    box-shadow: 2px 3px 0 0 rgb(73, 73, 73);
+
+
+
+}
+
+.headerforthreeelements {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imageIcons {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 5px;
+    object-fit: cover;
+    font-size: 1.20em;
+    border-radius: 100px;
+}
+
+#valueToday {
+    margin-top: 5px;
+    font-size: 1.20em;
+    margin-right: 8px;
+    color: var(--normalcolor);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#nameForElelments {
+    display: flex;
+    font-size: 14px;
+    margin-top: 2px;
+    margin-left: 10px;
+    width: fit-content;
+    align-items: center;
+    font-weight: lighter;
+    color: var(--normalcolor);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.myListContainer {
+    width: 100%;
+
+}
+
+.headingmyList {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 12px;
+    color: var(--normalcolor);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.addedListedContainer {
+    width: 99%;
+    display: flex;
+    height: 430px;
+    margin-top: 10px;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+.addListedContainerInner {
+    width: 93%;
+    height: fit-content;
+    padding-bottom: 100px;
+
+}
+
+.addListedContainerInner ol {
+    width: 100%;
+    height: fit-content;
+
+}
+
+.addListedContainerInner ol li {
+    width: 98%;
+    height: 24px;
+    display: flex;
+    margin-top: 15px;
+    list-style: none;
+    padding-left: 0px;
+    padding-top: 10px;
+    align-items: center;
+    padding-bottom: 10px;
+    color: var(--normalcolor);
+    transition-duration: 0.20s;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.addListedContainerInner ol li:hover {
+    cursor: pointer;
+    border-radius: 9px;
+    background-color: var(--hoverbackground);
+}
+
+.addListedContainerInner ol li abbr {
+    width: 25px;
+    height: 25px;
+    padding: 3px;
+    display: flex;
+    margin-right: 8px;
+    align-items: center;
+    border-radius: 100px;
+    justify-content: center;
+    background-color: var(--newyellowgreen);
+}
+
+#ForEachListAddedOneHowMuchAdd {
+    width: 20%;
+    text-align: center;
+    font-family: sans-serif;
+
+}
+
+#ListAddedOfName {
+    width: 70%;
+    color: var(--realwhitecolor);
+
+
+}
+
+.addlistsContainer {
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.inneraddlistsContainer {
+    width: 90%;
+    padding: 6px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 5px;
+    align-items: center;
+
+
+}
+
+#AddListButton {
+    width: 25px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 100px;
+}
+
+.inneraddlistsContainer p {
+    font-size: 18px;
+    margin-left: 10px;
+    font-weight: lighter;
+    color: var(--normalcolor);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.inneraddlistsContainer:hover {
+    color: var(--newyellowgreen);
+    background-color: var(--hoverbackground);
+
+}
+
+#mainBranch {
+    top: 0;
+    right: 0;
+    width: 78%;
+    height: 100%;
+    position: fixed;
+    background-color: #15222e;
+}
+
+.HeaderForMianBranch {
+    top: 0;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    padding-bottom: 10px;
+    flex-direction: column;
+
+
+}
+
+.focuseTowardheadingcontentandhowmuchaddedlists {
+    width: 98%;
+    display: flex;
+    margin-top: 50px;
+    height: fit-content;
+    justify-content: space-between;
+}
+
+#Whereareyou {
+    font-size: 2em;
+    color: var(--headingcolorall);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#howmuchlistsaddedsmall {
+    font-size: 2em;
+    color: var(--headingcolorall);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.completedcontainer {
+    width: 98%;
+    display: flex;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(52, 52, 52);
+
+}
+
+.completedcontainer p {
+    font-size: 1.20em;
+    padding-left: 5px;
+    color: var(--normalcolor);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.addsmalllistsContainer {
+    top: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+}
+
+#AddListButtonTwo {
+    width: 45px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.storebranchContainer {
+    bottom: 0;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    overflow-y: scroll;
+    position: absolute;
+
+
+}
+
+
+#MainOl {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+
+}
+
+#ChekBox {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+li {
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+li:hover {
+    background-color: rgba(60, 60, 60, 0.443);
+    border-radius: 8px;
+
+}
+
+
+#containerForSureToDelete {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    animation-duration: 2s;
+    animation-name: animationTwo;
+    animation-iteration-count: calc(1);
+    background-color: rgba(151, 151, 151, 0.171);
+}
+
+.innerForSure {
+    width: 40%;
+    height: 40%;
+    border-radius: 8px;
+    animation-duration: 0.50s;
+    background-color: #2a2929;
+    animation-name: animationOne;
+    animation-iteration-count: calc(1);
+}
+
+@keyframes animationOne {
+    0% {
+        transform: translatey(-100px);
+    }
+
+    100% {
+        transform: translatey(00px);
+
+    }
+}
+
+@keyframes animationThree {
+    0% {
+        transform: translate(-100px);
+    }
+
+    100% {
+        transform: translate(0px);
+
+    }
+}
+
+@keyframes animationTwo {
+    0% {
+        opacity: 0;
+        ;
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+.contentForThat {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentForThat h1 {
+    color: white;
+    font-size: 1.50em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ButtonContainerForSure {
+    width: 90%;
+    height: 203px;
+    display: flex;
+    margin: 0 auto;
+    align-items: end;
+    justify-content: end;
+    border-top: 1px solid var(--normalcolor);
+}
+
+#cancel {
+    width: 150px;
+    height: 40px;
+    border: none;
+    margin: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 0px;
+    color: var(--normalcolor);
+    background-color: transparent;
+    border: 1px solid var(--normalcolor);
+
+
+}
+
+#Delete {
+    width: 150px;
+    height: 40px;
+    border: none;
+    margin: 8px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 0px;
+    background-color: rgb(255, 58, 58);
+}
+
+#Delete:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+#cancel:hover {
+    color: white;
+    background-color: gray;
+}
+
+#DeleteRope {
+    padding: 4px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 5px;
+    /* background-color: #5b626a; */
+    color: var(--newyellowgreen);
+    background-color: var(--backgroundcolorlikeblack);
+}
