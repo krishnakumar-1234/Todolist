@@ -101,31 +101,6 @@ function addingListsFromAddingButtonInLeftBar() {
 } addingListsFromAddingButtonInLeftBar()
 
 
-// function MainBrachForAddingListsAndSome() {
-//     const AddListButtonTwo = document.querySelector('#AddListButtonTwo');
-//     const storeinnerbranch = document.getElementById('storeinnerbranch');
-//     const MainOl = document.getElementById("MainOl");
-//     AddListButtonTwo.addEventListener('click', () => {
-//         let createElementLi = document.createElement('li');
-//         createElementLi.style.fontSize = "1em"
-//         createElementLi.style.width = "900px";
-//         createElementLi.style.color = "#b8b8b8"
-//         createElementLi.style.lineHeight = "40px"
-//         createElementLi.style.marginLeft = "40px"
-//         createElementLi.style.borderBottom = "1px solid rgb(52, 52, 52)"
-//         createElementLi.style.animationName = "animationOne";
-//         createElementLi.style.animationDuration = "0.50s"
-//         createElementLi.style.animationIterationCount = "calc('1')"
-//         createElementLi.style.fontFamily = " system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
-
-//         let NameForToDoLists = prompt("What is Your Plan?");
-//            MainOl.appendChild(createElementLi).innerHTML = NameForToDoLists;
-//         const ChekBox = document.getElementById("ChekBox")
-//         MainOl.appendChild(createElementLi).innerHTML = `<input type="checkbox" name="" id="ChekBox">` + NameForToDoLists;
-
-
-//     })
-// } MainBrachForAddingListsAndSome()
 
 
 
@@ -134,68 +109,63 @@ function renderTasks() {
     MainOl.innerHTML = "";
     const AddListButtonTwo = document.getElementById("AddListButtonTwo");
     const completed = document.getElementById("completed");
-
+    
     AddListButtonTwo.addEventListener('click', () => {
+        const ContentForList = document.createElement("p");
         const deleteButton = document.createElement('button');
         const checkbox = document.createElement('input');
-        checkbox.setAttribute("type", "radio");
+        checkbox.setAttribute("type", "checkbox");
         const listItem = document.createElement('li');
-        listItem.style.fontSize = "1em"
         listItem.style.width = "900px";
+        listItem.style.fontSize = "1em"
+        listItem.style.display = "flex"
         listItem.style.color = "#b8b8b8"
         listItem.style.lineHeight = "40px"
         listItem.style.marginLeft = "40px"
-        listItem.style.borderBottom = "1px solid rgb(52, 52, 52)"
-        listItem.style.animationName = "animationOne";
-        listItem.style.animationDuration = "0.50s"
-        listItem.style.animationIterationCount = "calc('1')"
-        listItem.style.fontFamily = " system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
-        listItem.style.display = "flex"
+        ContentForList.style.width = "80%"
         listItem.style.alignItems = "center"
+        listItem.style.animationDuration = "0.50s"
+        listItem.style.animationName = "animationOne";
         listItem.style.justifyContent = "space-between"
+        listItem.style.animationIterationCount = "calc('1')"
+        listItem.style.borderBottom = "1px solid rgb(52, 52, 52)"
+        listItem.style.fontFamily = " system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
 
         let AddTakaFromPrompt = prompt("Add Your Task");
-
-
-
         deleteButton.addEventListener('click', () => listItem.remove());
 
 
         deleteButton.style.width = "100px";
         deleteButton.style.height = "30px";
-        deleteButton.style.backgroundColor = "#72a24d";
         deleteButton.style.border = "none";
         deleteButton.style.color = "white";
-        deleteButton.style.borderRadius = "5px";
         deleteButton.style.float = "right";
         deleteButton.style.cursor = "pointer";
-
+        deleteButton.style.borderRadius = "5px";
+        deleteButton.style.backgroundColor = "#72a24d";
         checkbox.style.width = "20px";
         checkbox.style.height = "20px";
         checkbox.style.cursor = "pointer";
+        
         let no = "no"
+
         checkbox.addEventListener("click", () => {
             if (no == "no") {
-                listItem.style.textDecoration = "line-through"
                 checkbox.innerHTML = "✅"
                 checkbox.style.backgroundColor = ""
-          
+                listItem.style.textDecoration = "line-through"
                 no = "Yes"
             } else {
-                listItem.style.textDecoration = ""
                 checkbox.innerHTML = "Tick"
+                listItem.style.textDecoration = ""
                 checkbox.style.backgroundColor = "black"
-
                 no = "no"
-
             }
         })
-
-
-        MainOl.appendChild(listItem).innerHTML = AddTakaFromPrompt;
+        MainOl.appendChild(listItem);
+        listItem.appendChild(ContentForList).innerHTML = AddTakaFromPrompt;
         listItem.appendChild(checkbox).innerHTML = "Tick";
         listItem.appendChild(deleteButton).innerHTML = "Delelte"
 
     })
-
 } renderTasks()
