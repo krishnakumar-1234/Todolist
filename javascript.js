@@ -84,17 +84,45 @@ function allThings() {
 function addingListsFromAddingButtonInLeftBar() {
     const olOfListContainer = document.getElementById('olOfListContainer');
     const inneraddlistsContainer = document.getElementById("inneraddlistsContainer");
-
     inneraddlistsContainer.addEventListener('click', () => {
-        let createElementLi = document.createElement('li');
-        createElementLi.style.animationName = "animationThree";
-        createElementLi.style.animationDuration = "0.10s"
-        let setIdFor = createElementLi.setAttribute('id', 'ListInLeftBar')
-        createElementLi.style.animationIterationCount = "calc('1')"
+        const containerForSureToDelete = document.getElementById('containerForSureToDelete');
+        const cancel = document.getElementById('cancel')
+        const Delete = document.getElementById('Delete')
+        let abbr = document.createElement('abbr');
+        let ListAddedOfName = document.createElement('div');
+        let ForEachListAddedOneHowMuchAdd = document.createElement('div');
+        let DeleteRope = document.createElement('button');
+        DeleteRope.setAttribute('id', 'DeleteRope');
+        ForEachListAddedOneHowMuchAdd.setAttribute('id', 'ForEachListAddedOneHowMuchAdd');
+        ListAddedOfName.setAttribute('id', 'ListAddedOfName');
 
-        olOfListContainer.appendChild(createElementLi).innerHTML = `<abbr>📚</abbr><p id="ListAddedOfName" onclick="innerHTML =prompt() ">New List</p><p id="ForEachListAddedOneHowMuchAdd"><Button id="DeleteRope" onclick="alert()">Delete</button></p>`;
-        console.log(createElementLi)
+        let createElementList = document.createElement('li');
+        createElementList.style.animationDuration = "0.10s"
+        createElementList.style.animationName = "animationThree";
+        createElementList.style.animationIterationCount = "calc('1')"
+        let setIdFor = createElementList.setAttribute('id', 'ListInLeftBar')
 
+        olOfListContainer.appendChild(createElementList)
+
+        ForEachListAddedOneHowMuchAdd.appendChild(DeleteRope).innerHTML = "Delete"
+
+        createElementList.appendChild(abbr).innerHTML = "📚"
+
+        createElementList.appendChild(ListAddedOfName).innerHTML = "New List";
+
+        createElementList.appendChild(ForEachListAddedOneHowMuchAdd);
+
+
+        Delete.addEventListener('click', () => {
+            createElementList.splice(index, 1);
+        })
+
+        DeleteRope.addEventListener('click', () => createElementList.remove())
+        ListAddedOfName.addEventListener('click', () => {
+            let x = prompt('Change Your List Name');
+            ListAddedOfName.innerHTML = x;
+
+        })
 
     });
 
@@ -105,8 +133,10 @@ function addingListsFromAddingButtonInLeftBar() {
 
 
 function renderTasks() {
+
     const MainOl = document.getElementById("MainOl");
     MainOl.innerHTML = "";
+    MainOl.style.marginTop = "25px"
     const AddListButtonTwo = document.getElementById("AddListButtonTwo");
     const completed = document.getElementById("completed");
     
@@ -117,6 +147,7 @@ function renderTasks() {
         checkbox.setAttribute("type", "checkbox");
         const listItem = document.createElement('li');
         listItem.style.width = "900px";
+        listItem.style.minWidthwidth = "100%";
         listItem.style.fontSize = "1em"
         listItem.style.display = "flex"
         listItem.style.color = "#b8b8b8"
@@ -151,7 +182,7 @@ function renderTasks() {
 
         checkbox.addEventListener("click", () => {
             if (no == "no") {
-                checkbox.innerHTML = "✅"
+         
                 checkbox.style.backgroundColor = ""
                 listItem.style.textDecoration = "line-through"
                 no = "Yes"
@@ -166,6 +197,20 @@ function renderTasks() {
         listItem.appendChild(ContentForList).innerHTML = AddTakaFromPrompt;
         listItem.appendChild(checkbox).innerHTML = "Tick";
         listItem.appendChild(deleteButton).innerHTML = "Delelte"
+        ContentForList.addEventListener('click', () => {
+            let rename = prompt("Change Your Task");
 
+            ContentForList.innerHTML = rename;
+        })
     })
+    console.log(completed)
+    // const storedName = localStorage.getItem("ListItems");
+    // myHeading.textContent = `Mozilla is cool, ${storedName}`;
+    // console.log(storedName)
 } renderTasks()
+
+
+
+
+
+
